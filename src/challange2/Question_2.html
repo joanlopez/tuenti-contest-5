@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="resources/normalize.css?1">
+	<link rel="stylesheet" href="resources/contest.css?2">
+	<link rel="stylesheet" href="resources/countdown.css?2">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="resources/widgets.js"></script>
+	<script type="text/javascript" src="resources/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="resources/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="resources/lodash.min.js"></script>
+	<script type="text/javascript" src="resources/countdown.js"></script>
+
+	<title>Tuenti Challenge 5</title>
+</head>
+
+<body>
+	<header>
+		<div class="grid">
+			<h1 class="logo h-left"><a href="/">Tuenti Challenge 5</a></h1>
+			<nav class="h-right">
+				<ul>
+					<li class="none"><a href="/">Home</a></li>
+					<li class="none"><a href="/Info/about">Info</a></li>
+					<li class="active"><a href="/Challenges">Challenges</a></li>
+					<li class="none"><a href="/Info/past">Past editions</a></li>
+														</ul>
+			</nav>
+		</div>
+	</header>
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 2</strong> - Almost prime</h2>
+	<nav class="h-right">
+		<a class="" href="Question_1.html"><span>« Prev</span></a>
+		<a class="" href="Question_3.html"><span>Next »</span></a>
+	</nav>
+	</h2>
+	<p>A composite number is a positive integer that has at least one positive divisor other than one or the number itself. In other words, a composite number is any positive integer greater than one that is not a prime number.<br/>
+For example, <kbd>14 = 2*7</kbd> and <kbd>18 = 2*3*3</kbd> are composite numbers.</p>
+
+<p>We will say a number is "almost prime" if it has exactly two (not necessarily distinct) prime factors.<p>
+
+<p>For example, the following numbers are almost prime: <kbd>6 = 2*3</kbd>, <kbd>25 = 5*5</kbd>.
+And the following numbers are not: <kbd>17</kbd> (prime), <kbd>81 = 3*3*3*3</kbd>.</p>
+
+<p>Please help us get an idea about how many almost prime numbers there are in certain integer intervals.</p>
+
+<h3>Input</h3>
+
+<p>The first line contains an integer <kbd>T</kbd>, the number of test cases.
+<kbd>T</kbd> lines follow, containing two integers each: <kbd>A</kbd> and <kbd>B</kbd>, separated by a space.</p>
+
+<h3>Output</h3>
+
+<p>For each test case, print the number of almost prime numbers <kbd>P</kbd> that verify <kbd>A &le; P &le; B</kbd>.</p>
+
+<h3>Constraints</h3>
+
+<pre>1 &le; T &le; 100
+1 &le; A &le; B &le; 10^8</pre>
+
+<h3>Sample input</h3>
+
+<pre>
+2
+1 10
+10 20
+</pre>
+
+<h3>Sample output</h3>
+
+<pre>
+4
+3
+</pre>
+</div>
+
+<h3>Problem stats</h3>
+		<div id="status">
+<table class="status">
+<tbody>
+<tr>
+	<th>Completion time:</th>
+	<td>
+		<b>10 percentile:</b> 0:60 h<br />
+		<b>90 percentile:</b> 45:55 h<br />
+	</td>
+</tr>
+<tr>
+	<th>Submit exec time:</th>
+	<td>
+		<b>min:</b> 7.00 s<br />
+		<b>10 percentile:</b> 26.00 s<br />
+		<b>90 percentile:</b> 32986.67 s<br />
+		<b>max:</b> 214264.87 s<br />
+	</td>
+</tr>
+<tr>
+	<th>Test tries:</th>
+	<td>
+		<b>min:</b> 1<br />
+		<b>10 percentile:</b> 1<br />
+		<b>90 percentile:</b> 7<br />
+		<b>max:</b> 90<br />
+	</td>
+</tr>
+<tr><th># of completions:</th><td>412</td></tr>
+</tbody>
+</table>
+</div>
+<br />
+	<nav class="h-right" style="padding-top: 0;">
+		<a class="" href="Question_1.html"><span>« Prev</span></a>
+		<a class="" href="Question_3.html"><span>Next »</span></a>
+	</nav>
+</div>
+
+</div>
+</div>
+</div>
+	<footer>
+		<div class="grid">
+			<p class="h-left">
+				Tweet about this! <a href="http://twitter.com/intent/tweet?text=%23TuentiChallenge5" target="_blank">#TuentiChallenge5</a>
+			</p>
+			<ul class="h-right scl-menu">
+				<li>
+					<a href="https://twitter.com/Tuentieng" class="twitter-follow-button" data-show-count="false"
+					data-lang="es" data-show-screen-name="false" data-dnt="true" target="_blank">Follow @TuentiEng</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-40515046-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+</body>
+</html>
