@@ -1,0 +1,181 @@
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="resources/normalize.css?1">
+	<link rel="stylesheet" href="resources/contest.css?2">
+	<link rel="stylesheet" href="resources/countdown.css?2">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="resources/widgets.js"></script>
+	<script type="text/javascript" src="resources/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="resources/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="resources/lodash.min.js"></script>
+	<script type="text/javascript" src="resources/countdown.js"></script>
+
+	<title>Tuenti Challenge 5</title>
+</head>
+
+<body>
+	<header>
+		<div class="grid">
+			<h1 class="logo h-left"><a href="/">Tuenti Challenge 5</a></h1>
+			<nav class="h-right">
+				<ul>
+					<li class="none"><a href="/">Home</a></li>
+					<li class="none"><a href="/Info/about">Info</a></li>
+					<li class="active"><a href="/Challenges">Challenges</a></li>
+					<li class="none"><a href="/Info/past">Past editions</a></li>
+														</ul>
+			</nav>
+		</div>
+	</header>
+<div class="content">
+<div class="grid">
+<div class="problem">
+
+<div class="problem-section">
+	<h2><strong>Challenge 7</strong> - The Perfect Larry Matching Algorithm</h2>
+	<nav class="h-right">
+		<a class="" href="Question_6.html"><span>« Prev</span></a>
+		<a class="" href="Question_8.html"><span>Next »</span></a>
+	</nav>
+	</h2>
+	<p>Larry had tried everything he possibly could. First, he tried going to bars accompanied by a shameless wingman who (for a not-too-large fee) would approach girls and ask them "have you met Larry?"... but the same answer always came back, “Thank God, no!”. He tried lying, pretending to be a rich and successful man, or a thrill-seeking archeologist. He tried speed dating, with the emphasis in his case on “speed”. And, finally, he tried meeting girls using dating websites, which promised him to find his perfect match... but that didn't work either.</p>
+<p align="center"><img src="resources/img/larry.jpg" alt="Larry"/></p>
+<p>After years and years of loneliness and not scoring, Larry realized that the blame lay, of course, with the matching algorithm used by these dating sites. It wasn't good enough, and that’s why it always matched him with women who weren't interested in him at all. As he had so much time on his hands, he decided to make a study. He has created a poll on a large dataset of men and women and compared the answers with the results, obtaining a set of meaningful questions for every profile. He has also found that the important issue often isn't the answer given by the girl, but the ones given by her friends, or even her friend’s friends. Finally, he has studied his own profile and as a result he has obtained... the Perfect Larry Matching Algorithm.</p>
+<p>The questions in the poll are as follows:</p>
+<ul>
+    <li><strong>A.</strong> Do you like naughty, dirty games?</li>
+    <li><strong>B.</strong> Do you like super hero action figures?</li>
+    <li><strong>C.</strong> Do you like men in leisure suits?</li>
+    <li><strong>D.</strong> Do you like cats?</li>
+    <li><strong>E.</strong> Do you like to go shopping?</li>
+</ul>
+<p>The final score for every girl G will be obtained by adding these points:</p>
+<ul>
+    <li>7 points if G likes naughty, dirty games</li>
+    <li>3 points for every friend of G who likes super hero action figures.</li>
+    <li>6 points for every friend of a friend of G, not including the friends of G and G herself, who likes men in leisure suits</li>
+    <li>4 points if G has any friend H who likes cats, and no friend of H (except perhaps G) likes cats (4 points at most, not 4 for every friend).</li>
+    <li>5 points for every girl H who likes to go shopping and has no possible connection with G through a chain of friends (friends, friends of friends, friends of friends of friends, etc.)</li>
+</ul>
+<p>Larry is now feeling hopeful and anxious... his big day is getting closer. He just needs a tough and hardened engineer who is able to process the data of his polls according to the magic algorithm. Could it be you?</p>
+
+<h3>Input</h3>
+
+<p>The input file starts with 2 numbers in a single line:</p>
+<ul>
+    <li><strong>N</strong>, the number of girls in the poll</li>
+    <li><strong>M</strong>, the number of friendship lines</li>
+</ul>
+<p><strong>N</strong> lines will follow, each one containing the name of the girl, and her answers to the questions A to E, using a “Y” if the answer is yes or an “N” if the answer is no.</p>
+<p>After those, <strong>M</strong> lines will follow, each one containing a sequence of names of girls who are friends with one another (every girl in the sequence is a friend of the others). Friendship relationships between two or more girls can be repeated in other lines.</p>
+
+<h3>Output</h3>
+
+<p>Output one single line indicating the maximum score obtained by a girl in the poll.</p>
+
+<h3>Limits</h3>
+
+<p><strong>M</strong> and <strong>N</strong> will fit in a 32-bit signed integer.</p>
+
+<h3>Sample input</h3>
+<pre>5 2
+MINDY N Y Y Y N
+COLLEEN Y Y N N Y
+PIGGY N N N N Y
+BAMBI N N Y Y N
+BARBARA Y Y Y Y Y
+MINDY COLLEEN BAMBI
+PIGGY BAMBI
+</pre>
+
+<h3>Sample output</h3>
+<pre>17
+</pre>
+
+<p>Barbara is the chosen one! She gets 7 points because she likes naughty, dirty games (A) and 5*2 = 10 points because Colleen and Peggy like to go shopping and they have no direct or indirect connection through friends to Barbara (E). Mindy got 12 points, Colleen 15, Piggy 11 and Bambi 15.</p>
+</div>
+
+<h3>Problem stats</h3>
+		<div id="status">
+<table class="status">
+<tbody>
+<tr>
+	<th>Completion time:</th>
+	<td>
+		<b>10 percentile:</b> 1:13 h<br />
+		<b>90 percentile:</b> 20:04 h<br />
+	</td>
+</tr>
+<tr>
+	<th>Submit exec time:</th>
+	<td>
+		<b>min:</b> 8.59 s<br />
+		<b>10 percentile:</b> 39.45 s<br />
+		<b>90 percentile:</b> 2922.34 s<br />
+		<b>max:</b> 76303.46 s<br />
+	</td>
+</tr>
+<tr>
+	<th>Test tries:</th>
+	<td>
+		<b>min:</b> 1<br />
+		<b>10 percentile:</b> 1<br />
+		<b>90 percentile:</b> 4<br />
+		<b>max:</b> 32<br />
+	</td>
+</tr>
+<tr><th># of completions:</th><td>104</td></tr>
+</tbody>
+</table>
+</div>
+<br />
+	<nav class="h-right" style="padding-top: 0;">
+		<a class="" href="Question_6.html"><span>« Prev</span></a>
+		<a class="" href="Question_8.html"><span>Next »</span></a>
+	</nav>
+</div>
+
+</div>
+</div>
+</div>
+	<footer>
+		<div class="grid">
+			<p class="h-left">
+				Tweet about this! <a href="http://twitter.com/intent/tweet?text=%23TuentiChallenge5" target="_blank">#TuentiChallenge5</a>
+			</p>
+			<ul class="h-right scl-menu">
+				<li>
+					<a href="https://twitter.com/Tuentieng" class="twitter-follow-button" data-show-count="false"
+					data-lang="es" data-show-screen-name="false" data-dnt="true" target="_blank">Follow @TuentiEng</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-40515046-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+</body>
+</html>
