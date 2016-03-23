@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/joanlopez/tuenti-contest-5.svg?branch=master)](https://travis-ci.org/joanlopez/tuenti-contest-5)
 # tuenti-contest-5
 Some of the 5th Tuenti's Contest problems solved
 
